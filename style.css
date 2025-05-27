@@ -1,1 +1,183 @@
+@font-face { font-family: "vivl"; src: url('vivl-rail.otf'); }
+html{
+    scroll-behavior: smooth;
+    font-family: "vivl";
+    background-image: url("Background.png");
+    background-attachment: fixed;
+}
+body{
+    width: 50%;
+    background-color:aliceblue;
+    justify-self: center;
+    border: 2px solid black;
+    opacity: 75%;
+    padding-bottom: 120px;
+}
 
+
+/* menu */
+
+.menu_bt{
+    transition-duration: 0.75s;
+    position: absolute;
+    top: -20px;
+    left: 95%;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    font-size: 35px;
+    background-color: aliceblue;
+    border: 2px solid black;
+    border-radius: 100%;
+}
+.menu:hover .menu_bt{
+    transition-duration: 0.75s;
+    background-color: black;
+    border: 2px solid aliceblue;
+    rotate: 180deg;
+}
+.menu{
+    position: fixed;
+    transition-duration: 0.75s;
+    background-color: aliceblue;
+    color: rgb(42, 60, 142);
+    border-radius: 5px;
+    border: 2px dotted black;
+    padding-left: 10px;
+    top: 70px;
+    left: -17%;
+    width: 17.5%;
+    height: 15%;
+}
+.menu:hover {
+    transition-duration: 0.5s;
+    text-decoration: none;
+    transform: translate(90%, 0);
+    color: aliceblue;
+}
+
+.authors{
+    justify-self: center;
+    text-align: center;
+    font-size: 10px;
+    margin-top: -30px;
+    width: 50%;
+}
+
+h1{
+    justify-self: center;
+    margin-top: 20px;
+    font-size: 50px;
+}
+
+h2{
+    margin-left: 5%;
+}
+.h20{ position: relative; opacity: 0; animation: ani1 1.5s forwards; animation-delay: 5s; }
+.h21{ position: relative; opacity: 0; animation: ani1 1.5s forwards; animation-delay: 8s; }
+.h22{ position: relative; opacity: 0; animation: ani1 1.5s forwards; animation-delay: 13s; }
+
+.menu > ul > a{
+    display: block;
+    padding-top: 10px;
+    text-decoration: none;
+    font-size: 80%;
+}
+
+.menu > ul{ margin-top:10px; }
+.product >img{ width: 50%; height: 50%; align-self: right; position: relative; opacity: 0; animation: ani1 1.5s forwards;animation-delay: 1s }
+
+.product{
+    display: flex;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.product > ul{
+    text-align: center;
+    height: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flexbox;
+    justify-content: center;
+    border-right: 2px solid black;
+    padding-right: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative; opacity: 0; animation: ani1 1.5s forwards;animation-delay: 1s
+}
+
+.p0{ position: relative; opacity: 0; animation: ani1 1.5s forwards; animation-delay: 1s}
+.p1{ position: relative; opacity: 0; animation: ani1 1.5s forwards; animation-delay: 2s}
+.p2{ position: relative; opacity: 0; animation: ani1 1.5s forwards; animation-delay: 3s}
+.p3{ position: relative; opacity: 0; animation: ani1 1.5s forwards; animation-delay: 4s}
+
+
+li { display: flex; font-size: large; }
+.li1{ position: relative; opacity: 0; animation: ani2 1.5s forwards; animation-delay: 6s; }
+.li2{ position: relative; opacity: 0; animation: ani2 1.5s forwards; animation-delay: 7s; }
+
+.li2::before{
+    content: '';
+    display: inline-flex;
+    height: 102px;
+    width: 100px;
+    scale: 0.7;
+    padding-right: 22px;
+    background-image: url("dirt.png");
+}
+.li1::before{
+    content: '';
+    display: inline-flex;
+    height: 102px;
+    width: 100px;
+    scale: 0.7;
+    padding-right: 12px;
+    background-image: url("kirpich.png");
+}
+@keyframes ani1 {
+  from { top: -20px; opacity: 0;}
+  to {top: 0px; opacity: 1;}
+}
+
+@keyframes ani2 {
+  from { left: -50px; opacity: 0;}
+  to {left: 0px; opacity: 1;}
+}
+
+@keyframes ani3 {
+  from { top: 20px; opacity: 0;}
+  to { top: 0px; opacity: 1;}
+}
+
+.i0{ position: relative; display: inline; float: left; opacity: 0; animation: ani2 1.5s forwards; animation-delay: 9s}
+.i1{ position: relative; display: inline; float: right; margin-right: 5%; opacity: 0; animation: ani2 1.5s forwards; animation-delay: 10s}
+.i2{ position: relative; display: inline; float: left; opacity: 0; animation: ani2 1.5s forwards; animation-delay: 11s}
+.i3{ position: relative; display: inline; float: right; margin-right: 5%; opacity: 0; animation: ani2 1.5s forwards; animation-delay: 12s}
+
+.progress{
+    position: relative;
+}
+.progress > p > img{
+    width: 40%;
+    height: 50%;
+    margin-left: 5%;
+    display: inline;
+}
+
+.progress > ul > li{
+    position: absolute;
+    top: 70%;
+    margin-right: 10px;
+}
+
+.img0{ position: relative; opacity: 0; animation: ani3 2s forwards; animation-delay: 13s; }
+.img1{ position: relative; opacity: 0; animation: ani3 2s forwards; animation-delay: 13s; }
+
+.t0{ margin-top: 0px; margin-left: 5%; position: relative; opacity: 0; animation: ani2 0.5s forwards; animation-delay: 14s; }
+.t1{ margin-top: 50px; margin-left: 5%; position: relative; opacity: 0; animation: ani2 0.5s forwards; animation-delay: 14.5s; }
+.t2{ margin-top: 70px; margin-left: 5%; position: relative; opacity: 0; animation: ani2 0.5s forwards; animation-delay: 15s; }
+.t3{ margin-top: 100px; margin-left: 5%; position: relative; opacity: 0; animation: ani2 0.5s forwards; animation-delay: 15.5s; }
+.t4{ margin-top: 130px; margin-left: 5%; position: relative; opacity: 0; animation: ani2 0.5s forwards; animation-delay: 16s; }
+
+.er{ margin-top: 50%; }
+.er1{ display: flex; justify-content: center; text-decoration: none; margin-top: -20px;}
